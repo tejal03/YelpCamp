@@ -15,7 +15,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 //******Local mongoDB connection***************
 //mongoose.connect("mongodb://localhost/yelp_camp");
 //*********mlab mongodb instance*****************
-mongoose.connect("mongodb://scooby:scooby@ds041496.mlab.com:41496/yelp_camp");
+//*** Add your username and password here in mlab mongodb link****
+mongoose.connect("mongodb://dbuser:dbpassword@*****");
 app.use(express.static(__dirname + "/public"));
 
 seedDB();
@@ -49,35 +50,6 @@ app.use(function(req,res,next){
 
 // ==========  ROUTES ==========
 
-
-
-
-//add a object in campground
-// Campground.create( 
-//     {
-//         name:"Granite Hill",
-//         image:"https://ap.rdcpix.com/1630497543/27d54fe90399ab2698302be764d0ec77l-m0xd-w1020_h770_q80.jpg",
-//         description: "This is grate granite hill. No bathroom. No Water. Just beautiful granite! "
-        
-//     },function(error,campground){
-//     if(error){
-//         console.log(error);
-//     }else{
-//         console.log("Newly created campground.");
-//         console.log(campground);
-//     }
-// });
-/*
-var camp =[
-        
-        {name:"Salmon Creek", image:"http://www.hikinginbigsur.com/hikepix/salmoncreekmain.jpg"},
-        {name:"Granite Hill", image:"https://ap.rdcpix.com/1630497543/27d54fe90399ab2698302be764d0ec77l-m0xd-w1020_h770_q80.jpg"},
-        {name:"Mountain", image:"https://www.w3schools.com/css/trolltunga.jpg"},
-         {name:"Salmon Creek", image:"http://www.hikinginbigsur.com/hikepix/salmoncreekmain.jpg"},
-        {name:"Granite Hill", image:"https://ap.rdcpix.com/1630497543/27d54fe90399ab2698302be764d0ec77l-m0xd-w1020_h770_q80.jpg"},
-        {name:"Mountain", image:"https://www.w3schools.com/css/trolltunga.jpg"}
-        
-        ];*/
         
 app.get("/",function(req,res){
    res.render('landing'); 
