@@ -1,2 +1,2 @@
 # YelpCamp
-Wed development project using Node.js and Express
+Web development project using Node.js and Express
